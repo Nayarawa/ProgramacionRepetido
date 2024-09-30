@@ -28,11 +28,17 @@ public class Activitat22 {
         double conversionFahrenheit = (gradosCentigrados * 9 / 5) + 32;
         double conversionKmAMillas = kmTotales * KM_A_MILLA / 1;
         //double TemperaturaReal= 35.74+(0.6215*conversionFahrenheit)-(35.75*(Math.pow(conversionKmAMillas, 0.16))+0.4275*(conversionFahrenheit*(Math.pow(conversionKmAMillas,0.16 ))));
-        double TemperaturaReal= 35.74+0.6215*conversionFahrenheit-35.75*Math.pow(conversionKmAMillas, 0.16)+0.4275*conversionFahrenheit*Math.pow(conversionKmAMillas,0.16 );
+        double TemperaturaReal = 35.74 + 0.6215 * conversionFahrenheit - 35.75 * Math.pow(conversionKmAMillas, 0.16) + 0.4275 * conversionFahrenheit * Math.pow(conversionKmAMillas, 0.16);
 
-        double SensacionTermica=C1+C2*TemperaturaReal+C3*humitat+C4*TemperaturaReal*humitat+C5*Math.pow(TemperaturaReal, 2)+C6*Math.pow(humitat, 2)+C7*Math.pow(TemperaturaReal, 2)*humitat+C8*TemperaturaReal*Math.pow(humitat, 2)+C9*Math.pow(TemperaturaReal, 2)*Math.pow(humitat, 2);
-        System.out.println(SensacionTermica);
+        double SensacionTermica = C1 + C2 * TemperaturaReal + C3 * humitat + C4 * TemperaturaReal * humitat + C5 * Math.pow(TemperaturaReal, 2) + C6 * Math.pow(humitat, 2) + C7 * Math.pow(TemperaturaReal, 2) * humitat + C8 * TemperaturaReal * Math.pow(humitat, 2) + C9 * Math.pow(TemperaturaReal, 2) * Math.pow(humitat, 2);
+        System.out.println("CÀLCUL DE LA TEMPERATURA REAL");
+        System.out.println("-----------------------------");
+        System.out.println("Temperatura en ºC: "+gradosCentigrados);
+        System.out.println("Velocitat del vent en km\\h: "+kmTotales);
+        System.out.println("Humitat relativa %: "+humitat);
+        System.out.println("");
+        System.out.println("La sensació tèrmica és de " + SensacionTermica + " ºC");
+
     }
-    
 
 }
